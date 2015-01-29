@@ -1,7 +1,7 @@
 web:
   build: .
-  volumes:
-    - <change this to your webapp src location>:/server
   ports:
     - "8080:8080"
+  volumes:
+    - <change this to your webapp src location>:/server
 

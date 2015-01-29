@@ -13,36 +13,68 @@ an install up and running without much hassle, or if you just want to use my
 
 ### INSTALLATION
 
+#### 1. Auto setup
+If you want to use docker image database for the build, then simply run
+`docker pull`
+
+```
+    docker pull abaez/lapis
+```
+You're done! Go to [Usage](#Usage) for how to use.
+
 #### Manual Setup
 If you want to build the container for yourself then follow the steps:
 
 * Clone the repository.
 
+```
     hg clone <abaez/docker-lapis source> docker-lapis
+```
 
-##### Building docker container
+##### 2. Building docker container
 If you want to just build the container then follow the following steps, else
 follow `using fig directly` for steps on how to use the build directly from
 source.
 
 * enter the docker lapis location and run `build.sh`.
 
+```
     cd docker-lapis
     ./build.sh
+```
 You're done! Go to [Usage](#Usage) for how to use.
 
-##### Using fig directly
+##### 3. Using fig directly
 *  Edit the `fig.yml` line 6 to your webapp source location.
     * example: `- /data/web/best_website_ever:/server`
 *  Finally run `fig` and you good to go with your build.
 
+
+```
     cd docker-lapis
     fig up
+```
+You're done! Go to [Usage](#Usage) for how to use.
 
 ### USAGE
-If using the docker container directly, then you can use the docker build.
 
+#### Followed either `1.` or `2.`
+If using the `1.` or `2.` installation setup you can use one of the two setups:
+
+*  running directly from docker.
+
+```
     docker run -p 8080:8080 -v <your webapp src>:/server abaez/docker-lapis
+```
+*  using my [lapis project builder](https://bitbucket.org/a_baez/lapis-project-builder)
+for running. **Spoiler**: This may actually be the easiest way for getting up
+and running multiple projects. ;)
+
+#### Followed `3.`
+If you are using `3.` setup, then you shouldn't be needing my help here.
+However, I am kind, so all you have to do is make sure your lapis src is in
+the location you put on the `fig.yml`. That's it, and run `fig up`.
+
 
 ### LICENSE
 The MIT License (MIT)

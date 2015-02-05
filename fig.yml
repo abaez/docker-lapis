@@ -2,6 +2,7 @@ web:
   build: .
   ports:
     - "8080:8080"
+  environment:
+    - LAPIS_ENVIRONMENT=development
   volumes:
     - <change this to your webapp src location>:/server
-

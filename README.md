@@ -57,6 +57,11 @@ You're done! Go to [Usage](#Usage) for how to use.
 You're done! Go to [Usage](#Usage) for how to use.
 
 ### USAGE
+A quick note before continuing.
+Completely optional, but you can pick the lapis web environment
+of your project. This means you can expose multiple ports defined by the web
+environment you are using. By default, the environment is set to `development`
+on `$LAPIS_ENVIRONMENT` environment parameter in the container.
 
 #### Followed either `1.` or `2.`
 If using the `1.` or `2.` installation setup you can use one of the two setups:
@@ -64,7 +69,11 @@ If using the `1.` or `2.` installation setup you can use one of the two setups:
 *  running directly from docker.
 
 ```
-    docker run -p 8080:8080 -v <your webapp src>:/server abaez/docker-lapis
+    docker run \
+        -e LAPIS_ENVIRONMENT=development \
+        -p 8080:8080 \
+        -v <your webapp src>:/server \
+        abaez/docker-lapis
 ```
 *  using my [lapis project builder](https://bitbucket.org/a_baez/lapis-project-builder)
 for running. **Spoiler**: This may actually be the easiest way for getting up
@@ -74,7 +83,6 @@ and running multiple projects. ;)
 If you are using `3.` setup, then you shouldn't be needing my help here.
 However, I am kind, so all you have to do is make sure your lapis src is in
 the location you put on the `fig.yml`. That's it, and run `fig up`.
-
 
 ### LICENSE
 The MIT License (MIT)

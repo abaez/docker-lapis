@@ -3,14 +3,12 @@ FROM 3scale/openresty
 RUN luarocks install lapis
 
 # Make server directory
-RUN mkdir /server
-WORKDIR /server
-RUN lapis new --lua
+RUN mkdir /app
+WORKDIR /app
 
 ENV LAPIS_OPENRESTY "/opt/openresty/nginx/sbin/nginx"
 ENV LAPIS_ENVIRONMENT "development"
 
-EXPOSE 8080
-VOLUME /server
+VOLUME /app
 
 CMD ["/usr/local/bin/lapis", "server", "$LAPIS_ENVIRONMENT"]

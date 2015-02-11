@@ -46,7 +46,7 @@ You're done! Go to [Usage](#Usage) for how to use.
 
 ##### 3. Using fig directly
 *  Edit the `fig.yml` line 6 to your webapp source location.
-    * example: `- /data/web/best_website_ever:/server`
+    * example: `- /data/web/best_website_ever:/app`
 *  Finally run `fig` and you good to go with your build.
 
 
@@ -72,7 +72,7 @@ If using the `1.` or `2.` installation setup you can use one of the two setups:
     docker run \
         -e LAPIS_ENVIRONMENT=development \
         -p 8080:8080 \
-        -v <your webapp src>:/server \
+        -v <your webapp src>:/app \
         abaez/docker-lapis
 ```
 *  using my [lapis project builder](https://bitbucket.org/a_baez/lapis-project-builder)

@@ -5,4 +5,4 @@ web:
   environment:
     - LAPIS_ENVIRONMENT=development
   volumes:
-    - <change this to your webapp src location>:/server
+    - ./:/app

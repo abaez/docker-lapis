@@ -33,7 +33,7 @@ If you want to build the container for yourself then follow the steps:
 
 ##### 2. Building docker container
 If you want to just build the container then follow the following steps, else
-follow `using fig directly` for steps on how to use the build directly from
+follow `using docker-compose directly` for steps on how to use the build directly from
 source.
 
 * enter the docker lapis location and run `build.sh`.
@@ -44,15 +44,15 @@ source.
 ```
 You're done! Go to [Usage](#Usage) for how to use.
 
-##### 3. Using fig directly
-*  Edit the `fig.yml` line 6 to your webapp source location.
+##### 3. Using docker-compose directly
+*  Edit the `docker-compose.yml` line 6 to your webapp source location.
     * example: `- /data/web/best_website_ever:/app`
 *  Finally run `fig` and you good to go with your build.
 
 
 ```
     cd docker-lapis
-    fig up
+    docker-compose up
 ```
 You're done! Go to [Usage](#Usage) for how to use.
 
@@ -82,7 +82,7 @@ and running multiple projects. ;)
 #### Followed `3.`
 If you are using `3.` setup, then you shouldn't be needing my help here.
 However, I am kind, so all you have to do is make sure your lapis src is in
-the location you put on the `fig.yml`. That's it, and run `fig up`.
+the location you put on the `docker-compose.yml`. That's it, and run `docker-compose up`.
 
 ### LICENSE
 The MIT License (MIT)

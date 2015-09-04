@@ -1,4 +1,4 @@
-FROM 3scale/openresty
+FROM abaez/luarocks:openresty
 
 RUN luarocks install lapis
 

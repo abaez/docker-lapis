@@ -7,8 +7,11 @@ RUN mkdir /app
 WORKDIR /app
 
 ENV LAPIS_OPENRESTY "/opt/openresty/nginx/sbin/nginx"
-ENV LAPIS_ENVIRONMENT "development"
 
 VOLUME /app
 
-CMD ["/usr/local/bin/lapis", "server", "$LAPIS_ENVIRONMENT"]
+EXPOSE 8080 80
+
+ENTRYPOINT ["/usr/local/bin/lapis"]
+
+CMD ["server", "development"]

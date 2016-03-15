@@ -1,14 +1,14 @@
 Docker-Lapis
 ============
-A docker container for lapis server by [Alejandro Baez](https://twitter.com/a_baez).
+A docker container for lapis server by [Alejandro Baez][1].
 --------------------------------------
 
 ### DESCRIPTION
 A simple docker container for the lapis server. So what's the purpose of this
 lovely docker container? If you don't want to do a
-[lapis](http://leafo.net/lapis/) install on your machine, or if you want to get
+[lapis][2] install on your machine, or if you want to get
 an install up and running without much hassle, or if you just want to use my
-`*`*cough*`*` brilliant `*`*cough*`*` [lapis project builder](https://bitbucket.org/a_baez/lapis-project-builder)
+`*`*cough*`*` brilliant `*`*cough*`*` [lapis project builder][3]
  , then this docker container is for you!
 
 ### INSTALLATION
@@ -75,7 +75,7 @@ If using the `1.` or `2.` installation setup you can use one of the two setups:
         -v <your webapp src>:/app \
         abaez/docker-lapis
 ```
-*  using my [lapis project builder](https://bitbucket.org/a_baez/lapis-project-builder)
+*  using my [lapis project builder][3]
 for running. **Spoiler**: This may actually be the easiest way for getting up
 and running multiple projects. ;)
 
@@ -87,7 +87,7 @@ the location you put on the `docker-compose.yml`. That's it, and run `docker-com
 ### LICENSE
 The MIT License (MIT)
 
-Copyright (c) 2015 [Alejandro Baez](https://twitter.com/a_baez)
+Copyright (c) 2015 [Alejandro Baez][1]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -107,4 +107,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-
+[1]: https://keybaez.io/baez
+[2]: http://leafo.net/lapis/
+[3]: https://bitbucket.org/a_baez/lapis-project-builder

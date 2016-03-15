@@ -1,8 +1,7 @@
 web:
   build: .
+  command: server production
   ports:
-    - "8080:8080"
-  environment:
-    - LAPIS_ENVIRONMENT=development
+    - "80:80"
   volumes:
-    - ./:/app
+    - /data/Projects/web/lapis-test:/app
